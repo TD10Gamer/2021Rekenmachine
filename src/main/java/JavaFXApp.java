@@ -23,7 +23,9 @@ public class JavaFXApp extends Application {
 
     private static final String PLUS = "+";
     private static final String MULTIPLY = "*";
+
     private static final String DIVIDE = "/";
+
 
     private int getNumberFromTextField (TextField textField) {
         return Integer.parseInt (textField.getText ());
@@ -38,7 +40,12 @@ public class JavaFXApp extends Application {
     }
 
     protected int computeDivide (int number1, int number2) {
-        return 0;
+        if (number2 == 0) {
+            return 0;
+        }
+        else {
+            return number1/number2;
+        }
     }
 
     private void compute (String operator) {
